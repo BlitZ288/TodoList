@@ -1,0 +1,57 @@
+﻿<Window x:Class="todo.MainWindow"
+
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:todo" xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="TodoList" ResizeMode="CanResizeWithGrip" SizeToContent="Width" Background="#FFA0A2BD" Icon="/1.png" Width="1500">
+
+    <Grid Margin="10,10,0,-10" Height="415" Width="1500">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="137*"/>
+            <ColumnDefinition Width="609*"/>
+            <ColumnDefinition Width="246*"/>
+            <ColumnDefinition Width="106*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="131*"/>
+        </Grid.ColumnDefinitions>
+        <DatePicker x:Name="Data" HorizontalAlignment="Left" Margin="484,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.004,2.252" Height="40" Width="125" FontSize="14" Grid.Column="2" Grid.ColumnSpan="2" Background="#FFA4C9EE"/>
+        <Label x:Name="Heade_label" Content="Выберите дату и время " HorizontalAlignment="Left" Margin="360,10,0,0" VerticalAlignment="Top" FontSize="14" Height="29" Width="162" Grid.Column="2"/>
+
+        <Label x:Name="Time1" Content="Время" HorizontalAlignment="Left" Margin="214,74,0,0" VerticalAlignment="Top" FontSize="14" Height="29" Width="50" Grid.Column="2"/>
+        <TextBox x:Name="Name_Textbox" HorizontalAlignment="Left" Margin="297,144,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" Grid.Column="2" Background="#FFA4C9EE"/>
+        <Label x:Name="Name_label" Content="Название дела" HorizontalAlignment="Left" Margin="187,137,0,0" VerticalAlignment="Top" FontSize="14" Height="29" Width="105" Grid.Column="2"/>
+        <Button x:Name="Fill" Content="Заполнить" HorizontalAlignment="Left" Margin="302,208,0,0" VerticalAlignment="Top" Height="25" Width="115" Click="Button_Click" Grid.Column="2" Background="#FFA4C9EE"/>
+        <TextBox x:Name="Time" HorizontalAlignment="Left" Height="21" Margin="297,74,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Column="2" Background="#FFA4C9EE"/>
+        <Label Content="Приорет" HorizontalAlignment="Left" Height="27" Margin="422,139,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="0.5,0.5" Grid.Column="2">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.424"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <ComboBox x:Name="Prime" HorizontalAlignment="Left" Margin="484,142,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged" Height="22" Grid.Column="2" Grid.ColumnSpan="2" Background="#FFA4C9EE" BorderBrush="#FFA4C9EE" OpacityMask="#FFA4C9EE">
+            <TextBlock>1.Высокий</TextBlock>
+            <TextBlock>2.Средний</TextBlock>
+            <TextBlock>3.Низкий</TextBlock>
+
+        </ComboBox>
+        <Button Content="Показать дела" HorizontalAlignment="Left" Height="25" Margin="489,208,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click_2" Grid.Column="2" Grid.ColumnSpan="2" Background="#FFA4C9EE"/>
+        <Calendar x:Name="Calendar" HorizontalAlignment="Left" Margin="30,55,0,0" VerticalAlignment="Top" Height="178" Width="215" SelectionMode="MultipleRange" Grid.Column="1" Grid.ColumnSpan="2" Background="#FFA7C9EC"  />
+        <TextBlock x:Name="Read_Textblock" HorizontalAlignment="Left" Height="342" Margin="131,52,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="293" ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+         ScrollViewer.VerticalScrollBarVisibility="Auto" Foreground="Black" Grid.Column="3" Grid.ColumnSpan="5" Background="#FFA0A2BD"/>
+
+        <Label Content="Дела" Grid.ColumnSpan="4" Grid.Column="4" HorizontalAlignment="Left" Height="29" Margin="73,12,0,0" VerticalAlignment="Top" Width="121"/>
+
+    </Grid>
+
+</Window>
